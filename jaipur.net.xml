@@ -24,7 +24,7 @@
 
     <type id="highway.residential" priority="3" numLanes="1" speed="13.89" disallow="tram rail_urban rail rail_electric rail_fast ship" oneway="0"/>
     <type id="highway.tertiary" priority="10" numLanes="1" speed="22.22" disallow="tram rail_urban rail rail_electric rail_fast ship" oneway="0"/>
-
+    
     <edge id=":11586733427_0" function="internal">
         <lane id=":11586733427_0_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="13.89" length="14.47" shape="227.69,486.75 224.08,472.74"/>
     </edge>
@@ -4368,7 +4368,7 @@
         <lane id="532234618_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="13.89" length="134.64" shape="216.43,465.89 88.67,508.38"/>
     </edge>
 
-    <junction id="11586733427" type="priority" x="227.32" y="478.89" incLanes="-532234617#1_0 -1246284225_0 532234617#0_0" intLanes=":11586733427_0_0 :11586733427_9_0 :11586733427_10_0 :11586733427_3_0 :11586733427_4_0 :11586733427_5_0 :11586733427_6_0 :11586733427_7_0 :11586733427_11_0" shape="226.14,487.15 232.33,485.56 232.22,483.36 232.58,482.55 233.22,481.93 234.13,481.50 235.32,481.26 234.64,474.90 231.80,474.76 230.71,474.32 229.83,473.64 229.17,472.71 228.73,471.54 222.53,473.14">
+    <junction id="11586733427" type="traffic_light" x="227.32" y="478.89" incLanes="-532234617#1_0 -1246284225_0 532234617#0_0" intLanes=":11586733427_0_0 :11586733427_9_0 :11586733427_10_0 :11586733427_3_0 :11586733427_4_0 :11586733427_5_0 :11586733427_6_0 :11586733427_7_0 :11586733427_11_0" shape="226.14,487.15 232.33,485.56 232.22,483.36 232.58,482.55 233.22,481.93 234.13,481.50 235.32,481.26 234.64,474.90 231.80,474.76 230.71,474.32 229.83,473.64 229.17,472.71 228.73,471.54 222.53,473.14">
         <request index="0" response="000000000" foes="100010000" cont="0"/>
         <request index="1" response="011000000" foes="011110000" cont="1"/>
         <request index="2" response="010001000" foes="010001000" cont="1"/>
@@ -4629,24 +4629,28 @@
     </junction>
     <junction id="1813608603" type="traffic_light" x="476.48" y="453.35" incLanes="170204670_0 170204662#3_0" intLanes=":1813608603_0_0 :1813608603_1_0 :1813608603_2_0 :1813608603_4_0" shape="492.10,453.50 491.38,450.14 489.29,449.76 487.65,449.37 486.47,448.97 485.74,448.55 485.46,448.12 485.64,447.67 483.57,445.19 482.14,446.74 480.99,447.82 479.93,448.58 478.75,449.17 477.25,449.72 475.24,450.39 477.25,456.46 480.33,455.34 482.63,454.37 484.57,453.64 486.52,453.21 488.90,453.13">
         <tlLogic id="tl_1813608603" type="static" programID="0" offset="0">
-            <!-- Define phases and durations -->
+        <!-- Define phases and durations -->
+        <phase duration="30" state="GGrr"/>
+        <phase duration="5" state="yyrr"/>
+        <!-- Add more phases as needed -->
+
+        <!-- Define initial signal plan -->
+        <program id="0">
             <phase duration="30" state="GGrr"/>
             <phase duration="5" state="yyrr"/>
-            <!-- Add more phases as needed -->
+            <!-- Specify initial phases and durations -->
+        </program>
+    </tlLogic>
 
-            <!-- Define initial signal plan -->
-            <program id="0">
-                <phase duration="30" state="GGrr"/>
-                <phase duration="5" state="yyrr"/>
-                <!-- Specify initial phases and durations -->
-            </program>
-        </tlLogic>
-        <!-- Define traffic requests -->
-        <request index="0" response="0100" foes="0100" cont="0"/>
-        <request index="1" response="0000" foes="1100" cont="0"/>
-        <request index="2" response="0010" foes="0011" cont="0"/>
-        <request index="3" response="0010" foes="0010" cont="1"/>
+    <!-- Define traffic requests -->
+    <request index="0" response="0100" foes="0100" cont="0"/>
+    <request index="1" response="0000" foes="1100" cont="0"/>
+    <request index="2" response="0010" foes="0011" cont="0"/>
+    <request index="3" response="0010" foes="0010" cont="1"/>
     </junction>
+
+    
+
     <junction id="1813608618" type="priority" x="481.98" y="276.76" incLanes="-532234604#3_0 170205509#2_0 532234604#2_0 -170205509#3_0" intLanes=":1813608618_0_0 :1813608618_1_0 :1813608618_16_0 :1813608618_17_0 :1813608618_4_0 :1813608618_5_0 :1813608618_6_0 :1813608618_7_0 :1813608618_8_0 :1813608618_9_0 :1813608618_18_0 :1813608618_19_0 :1813608618_12_0 :1813608618_13_0 :1813608618_14_0 :1813608618_15_0" shape="481.23,284.67 487.30,282.67 487.03,280.43 487.32,279.53 487.89,278.77 488.74,278.16 489.87,277.70 488.01,271.58 485.66,271.81 484.71,271.50 483.91,270.90 483.25,270.02 482.77,268.92 476.69,270.93 474.14,275.98 476.15,282.06">
         <request index="0"  response="0000000000000000" foes="1000010000100000" cont="0"/>
         <request index="1"  response="0000000000000000" foes="0111110001100000" cont="0"/>
@@ -5512,12 +5516,6 @@
         <request index="8" response="000010001" foes="000010001" cont="1"/>
     </junction>
 
-    <!-- new code -->
-
-    
-
-    <!-- new code end -->
-
     <junction id=":11586733427_9_0" type="internal" x="227.24" y="482.64" incLanes=":11586733427_1_0 532234617#0_0" intLanes=":11586733427_4_0 :11586733427_5_0 :11586733427_6_0 :11586733427_7_0"/>
     <junction id=":11586733427_10_0" type="internal" x="228.16" y="485.39" incLanes=":11586733427_2_0 -1246284225_0 532234617#0_0" intLanes=":11586733427_3_0 :11586733427_7_0"/>
     <junction id=":11586733427_11_0" type="internal" x="226.71" y="473.31" incLanes=":11586733427_8_0 -1246284225_0 -532234617#1_0" intLanes=":11586733427_0_0 :11586733427_4_0"/>
@@ -5761,7 +5759,7 @@
     <junction id=":4761760989_9_0" type="internal" x="341.94" y="696.87" incLanes=":4761760989_5_0 28851242#0_0 483439737_0" intLanes=":4761760989_1_0 :4761760989_6_0"/>
     <junction id=":4761760989_10_0" type="internal" x="332.83" y="698.71" incLanes=":4761760989_7_0 -28851242#1_0" intLanes=":4761760989_1_0 :4761760989_2_0 :4761760989_3_0 :4761760989_4_0"/>
     <junction id=":4761760989_11_0" type="internal" x="330.33" y="699.93" incLanes=":4761760989_8_0 -28851242#1_0 483439737_0" intLanes=":4761760989_0_0 :4761760989_4_0"/>
-    
+
     <connection from="-1246284225" to="532234617#1" fromLane="0" toLane="0" via=":11586733427_3_0" dir="r" state="m"/>
     <connection from="-1246284225" to="-532234617#0" fromLane="0" toLane="0" via=":11586733427_4_0" dir="l" state="m"/>
     <connection from="-1246284225" to="1246284225" fromLane="0" toLane="0" via=":11586733427_5_0" dir="t" state="m"/>
