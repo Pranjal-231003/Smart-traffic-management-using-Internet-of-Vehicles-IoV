@@ -39,5 +39,5 @@ Vehicle 20 total traveling time: 59.49999999999999s
 Vehicle 30 total traveling time: 57.8s
 Vehicle 40 total traveling time: 57.49999999999999s
 Vehicle 10 total traveling time: 56.49999999999999s
-Total execution time: 0.4372274875640869 seconds
+Total execution time: 0.3456306457519531 seconds
 Total simulation time: 96.5 seconds

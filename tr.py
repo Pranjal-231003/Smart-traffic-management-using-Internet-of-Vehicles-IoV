@@ -29,7 +29,7 @@ def check_traffic_on_route(route_edges):
 
 def main():
     sumo_binary = "sumo-gui"  # Replace with the path to your SUMO binary
-    sumo_cmd = [sumo_binary, "-c", "jaipur.sumo.cfg", "--start"]
+    sumo_cmd = [sumo_binary, "-c", "jaipur.sumocfg", "--start"]
     traci.start(sumo_cmd)
     start_time = time.time()
     highest = 0
